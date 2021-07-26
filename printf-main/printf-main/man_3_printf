@@ -1,0 +1,39 @@
+.TH man 3 "26 July 2021" "0.10" "_printf man page"
+.SH NAME
+.B _printf
+- print anything.
+.SH SYNOPSIS
+.B #include "holberton.h"
+.B int _printf(const char *
+.I format
+.B , ...)
+.SH DESCRIPTION
+.B _printf()
+Prints output given to a format as described
+.SH Return value
+On successful return, these functions return the number of characters printed, excluding the null byte used to end output to strings.
+.SH CONVERSION SPECIFIERS
+.TP
+.BR c
+The int argument is converted to an unsigned char, then the resulting character is written
+.TP
+.B s
+The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte.
+.TP
+.B d, i
+The int argument is converted to signed decimal notation.
+.TP
+.B u, o, x, X
+The unsigned int argument is converted to unsigned octal(o), unsigned lowercase hexadecimal notation(x), unsigned uppercase hexadecimal notation(X), unsigned decimal(u), or binary notation(b).
+.TP
+.B %
+A '%' is written but no argument is converted. The complete version specification is '%%'
+.SH OPTIONS
+.B _printf
+takes five options.
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+Two unidentified bugs.
+.SH AUTHOR
+Yohannes Getu, Bryan Aniedi-Ekong
